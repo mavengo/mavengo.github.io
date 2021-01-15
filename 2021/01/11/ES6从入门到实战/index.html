@@ -85,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">2.3k</span>
+            <span class="post-count">2.6k</span>
         </span>
     </span>
 
@@ -94,7 +94,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">10 min</span>
+            <span class="post-count">11 min</span>
         </span>
     </span>
 </div>
@@ -234,7 +234,21 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> divs = <span class="built_in">document</span>.querySelectorAll(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> divArr = [...div];</span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br></pre></td></tr></table></figure>
 
 <p>（4）将arguments转换为真正的数组</p>
-<h2 id="十、Symbol的介绍与创建"><a href="#十、Symbol的介绍与创建" class="headerlink" title="十、Symbol的介绍与创建"></a>十、Symbol的介绍与创建</h2><h2 id="十一、迭代器"><a href="#十一、迭代器" class="headerlink" title="十一、迭代器"></a>十一、迭代器</h2><p>###</p>
+<h2 id="十、Symbol的介绍与创建"><a href="#十、Symbol的介绍与创建" class="headerlink" title="十、Symbol的介绍与创建"></a>十、Symbol的介绍与创建</h2><h3 id="1、Symbolde介绍"><a href="#1、Symbolde介绍" class="headerlink" title="1、Symbolde介绍"></a>1、Symbolde介绍</h3><p>ES6引入了一种新的原始数据类型 Symbol ，表示独一无二的值。它是JavaScript语言的第七种数据类型，是一种类似与字符串的数据类型。</p>
+<p>1、Symbol特点<br>    （1）Symbol的值是唯一的，用来解决命名冲突的问题。<br>    （2）Symbol值不能与其他数据类型进行运算。<br>    （3）Symbol定义的对象属性不能使用 for…in循环遍历，但是可以使用Reflect。ownKeys来获取对象的所有键名。</p>
+<h3 id="2、Symbol的创建"><a href="#2、Symbol的创建" class="headerlink" title="2、Symbol的创建"></a>2、Symbol的创建</h3><p>（1）Symbol()</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建Symbol</span></span><br><span class="line"><span class="keyword">let</span> s = <span class="built_in">Symbol</span>();</span><br><span class="line"><span class="built_in">console</span>.log(s, <span class="keyword">typeof</span> s);</span><br><span class="line"><span class="keyword">let</span> s2 = <span class="built_in">Symbol</span>(<span class="string">&#x27;s2&#x27;</span>);<span class="comment">//传的参数只是起到一个标识的作用</span></span><br></pre></td></tr></table></figure>
+
+<p>（2）使用 Symbol.for()方法创建</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> s4 = <span class="built_in">Symbol</span>.for(<span class="string">&#x27;s4&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(s4, <span class="keyword">typeof</span> s4);</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、Symbol的使用"><a href="#3、Symbol的使用" class="headerlink" title="3、Symbol的使用"></a>3、Symbol的使用</h3><p>（1）向一个对象中添加方法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> game = &#123;</span><br><span class="line">    up: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="built_in">console</span>.log(<span class="string">&quot;up&quot;</span>)&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 声明一个对象</span></span><br><span class="line"><span class="keyword">let</span> methods = &#123;</span><br><span class="line">    up: <span class="built_in">Symbol</span>()</span><br><span class="line">&#125;;</span><br><span class="line">game[methods.up] = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;symbolUp&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(game);</span><br></pre></td></tr></table></figure>
+
+<p>（2）在对象内部添加Symbol对象</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> 德云社 = &#123;</span><br><span class="line">    people: [<span class="string">&#x27;岳云鹏&#x27;</span>, <span class="string">&#x27;张鹤伦&#x27;</span>],</span><br><span class="line">    [<span class="built_in">Symbol</span>(<span class="string">&#x27;move&#x27;</span>)]: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;说相声&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(德云社);</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、Symbol的内置属性"><a href="#3、Symbol的内置属性" class="headerlink" title="3、Symbol的内置属性"></a>3、Symbol的内置属性</h3><h2 id="十一、迭代器"><a href="#十一、迭代器" class="headerlink" title="十一、迭代器"></a>十一、迭代器</h2><p>###</p>
  
       <!-- reward -->
       
