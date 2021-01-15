@@ -85,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">1.9k</span>
+            <span class="post-count">2.3k</span>
         </span>
     </span>
 
@@ -94,7 +94,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">8 min</span>
+            <span class="post-count">10 min</span>
         </span>
     </span>
 </div>
@@ -109,7 +109,7 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3690513587,4217686026&fm=26&gp=0.jpg"></p>
+  <p><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fs4.51cto.com%2Fimages%2Fblog%2F202101%2F11%2F26ace1ea8390ea14d9c4ade550586b3d.jpeg&refer=http%3A%2F%2Fs4.51cto.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1613301030&t=dd0b72cf7f016790a0e2f2acb4c16103"></p>
 <a id="more"></a>
 <h1 id="ES6从入门到实战"><a href="#ES6从入门到实战" class="headerlink" title="ES6从入门到实战"></a>ES6从入门到实战</h1><h2 id="一、let变量声明以及声明特性"><a href="#一、let变量声明以及声明特性" class="headerlink" title="一、let变量声明以及声明特性"></a>一、let变量声明以及声明特性</h2><h3 id="1、let声明变量"><a href="#1、let声明变量" class="headerlink" title="1、let声明变量"></a>1、let声明变量</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a;</span><br><span class="line"><span class="keyword">let</span> b,c,d;</span><br><span class="line"><span class="keyword">let</span> e = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">let</span> f = <span class="number">521</span>, g = <span class="string">&#x27;hello&#x27;</span> , h = [];</span><br></pre></td></tr></table></figure>
 
@@ -206,7 +206,36 @@
 <p>（1）箭头函数适合与this无关的回调，定时器，数组的方法回调。<br>（2）箭头函数不适合与this有关的回调，事件的回调，对象的方法回调。</p>
 <h2 id="七、函数参数的默认值设置"><a href="#七、函数参数的默认值设置" class="headerlink" title="七、函数参数的默认值设置"></a>七、函数参数的默认值设置</h2><p>ES6允许给函数参数赋初始值</p>
 <p>1、形参初始值，具有默认的参数，一般位置要靠后（潜规则）</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">a, c, b = <span class="number">100</span></span>)</span>&#123;</span><br><span class="line">    retuen a + c + d;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> result = add(<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line"><span class="built_in">console</span>.log(result);</span><br></pre></td></tr></table></figure> 
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">a, c, b = <span class="number">100</span></span>)</span>&#123;</span><br><span class="line">    retuen a + c + d;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> result = add(<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line"><span class="built_in">console</span>.log(result);</span><br></pre></td></tr></table></figure>
+
+<p>2、与解构赋值结合使用</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">connect</span>(<span class="params">&#123;host = <span class="string">&#x27;127&#x27;</span>, username, password, port&#125;</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(host);</span><br><span class="line">    <span class="built_in">console</span>.log(username);</span><br><span class="line">    <span class="built_in">console</span>.log(password);</span><br><span class="line">    <span class="built_in">console</span>.log(port);</span><br><span class="line">&#125;</span><br><span class="line">connect(&#123;</span><br><span class="line">    host: <span class="string">&#x27;信仰学院&#x27;</span>, <span class="comment">//此行删除，默认值127生效</span></span><br><span class="line">    username: <span class="string">&#x27;root&#x27;</span>,</span><br><span class="line">    password: <span class="string">&#x27;root&#x27;</span>,</span><br><span class="line">    port: <span class="number">3306</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="八、rest参数"><a href="#八、rest参数" class="headerlink" title="八、rest参数"></a>八、rest参数</h2><p>ES6 引入 rest参数，用于获取函数的实参，用来代替 arguments</p>
+<p>（1）ES5获取实参的方式</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">date</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">arguments</span>);</span><br><span class="line">&#125;</span><br><span class="line">date(<span class="string">&#x27;124&#x27;</span>, <span class="number">235</span>, <span class="number">343</span>);<span class="comment">//返回的是一个对象</span></span><br></pre></td></tr></table></figure>
+
+<p>（2）ES6方式</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">date</span>(<span class="params">...args</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(args);</span><br><span class="line">&#125;</span><br><span class="line">datef(<span class="number">234</span>,<span class="number">4545</span>,<span class="number">4354</span>);<span class="comment">//返回的是一个数组</span></span><br></pre></td></tr></table></figure>
+
+<p>rest 参数必须放到参数的最后。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">date</span>(<span class="params">a, b, ...args</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a);</span><br><span class="line">    <span class="built_in">console</span>.log(b);</span><br><span class="line">    <span class="built_in">console</span>.log(args);</span><br><span class="line">&#125;</span><br><span class="line">datef(<span class="number">4545</span>,<span class="number">4354</span>,<span class="number">23434</span>,<span class="string">&#x27;dfdf&#x27;</span>);<span class="comment">//返回的是一个数组,数组内存的是函数形参分配完剩下的参数，即不是包含所有的参数。</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="九、spread扩展运算符"><a href="#九、spread扩展运算符" class="headerlink" title="九、spread扩展运算符"></a>九、spread扩展运算符</h2><h3 id="1、扩展运算符介绍"><a href="#1、扩展运算符介绍" class="headerlink" title="1、扩展运算符介绍"></a>1、扩展运算符介绍</h3><p>“…” 扩展运算符能将数组转换为逗号为分隔的参数序列</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 声明一个函数 ...</span></span><br><span class="line"><span class="keyword">const</span> arr = [<span class="number">123</span>, <span class="number">345</span>, <span class="number">455</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 声明一个函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">arguments</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fun(...arr); <span class="comment">//返回 参数对象</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="2、扩展运算符应用"><a href="#2、扩展运算符应用" class="headerlink" title="2、扩展运算符应用"></a>2、扩展运算符应用</h3><p>（1）数组的合并</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">const</span> arr1 = [<span class="string">&quot;岳云鹏&quot;</span>];</span><br><span class="line">    <span class="keyword">const</span> arr2 = [<span class="string">&quot;孙悦&quot;</span>];</span><br><span class="line"><span class="comment">// const arr =  arr1.concat(arr2);//普通方法</span></span><br><span class="line">    <span class="keyword">const</span> arr = [...arr1, ...arr2];</span><br><span class="line">    <span class="built_in">console</span>.log(arr);</span><br></pre></td></tr></table></figure>
+
+<p>（2）数组的克隆</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr1 = [<span class="string">&#x27;张云雷&#x27;</span>,<span class="string">&#x27;张九郎&#x27;</span>];</span><br><span class="line"><span class="keyword">const</span> arr = [...arr1];</span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br></pre></td></tr></table></figure>
+
+<p>（3）将伪数组转换为真正的数组</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> divs = <span class="built_in">document</span>.querySelectorAll(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> divArr = [...div];</span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br></pre></td></tr></table></figure>
+
+<p>（4）将arguments转换为真正的数组</p>
+<h2 id="十、Symbol的介绍与创建"><a href="#十、Symbol的介绍与创建" class="headerlink" title="十、Symbol的介绍与创建"></a>十、Symbol的介绍与创建</h2><h2 id="十一、迭代器"><a href="#十一、迭代器" class="headerlink" title="十一、迭代器"></a>十一、迭代器</h2><p>###</p>
+ 
       <!-- reward -->
       
       <div id="reword-out">
