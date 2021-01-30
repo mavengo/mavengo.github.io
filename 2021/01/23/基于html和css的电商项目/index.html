@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-Hans">
+
+
+<head>
+  <meta charset="utf-8" />
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+    基于html和css的电商项目 |  
+  </title>
+  <meta name="generator" content="hexo-theme-ayer">
+  
+  <link rel="shortcut icon" href="/favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/dist/main.css">
+
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css">
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+  
+  
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+  
+  
+
+  
+
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    
+      <canvas class="fireworks"></canvas>
+      <style>
+        .fireworks {
+          position: fixed;
+          left: 0;
+          top: 0;
+          z-index: 99999;
+          pointer-events: none;
+        }
+      </style>
+      
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-基于html和css的电商项目"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  基于html和css的电商项目
+</h1>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/01/23/%E5%9F%BA%E4%BA%8Ehtml%E5%92%8Ccss%E7%9A%84%E7%94%B5%E5%95%86%E9%A1%B9%E7%9B%AE/" class="article-date">
+  <time datetime="2021-01-23T13:18:11.000Z" itemprop="datePublished">2021-01-23</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE/">前端项目</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">1.1k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">3 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><img src="http://pic1.win4000.com/wallpaper/2018-03-27/5ab9bafbc6ba2.jpg"></p>
+<p>对于本项目的说明：</br><br>本项目是在学习HTML5+CSS3的过程中制作的一个电商项目，本项目的主要目的是熟练掌握HTML5+CSS3基础，掌握网站开发流程，以及样式渲染的先后顺序。</br><br>项目的视频教程：</br></p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.bilibili.com/video/BV14J4114768?p=298</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<h1 id="品优购电商项目"><a href="#品优购电商项目" class="headerlink" title="品优购电商项目"></a>品优购电商项目</h1><p><b style="color: red;">目录</b><br> <ul><br>    <li>品优购项目规划</li><br>    <li>品优购首页制作</li><br>    <li>品优购列表制作</li><br>    <li>品优购注册页制作</li><br>    <li>域名注册与网站上传</li><br> </ul></p>
+<h2 id="一、品优购项目规划"><a href="#一、品优购项目规划" class="headerlink" title="一、品优购项目规划"></a>一、品优购项目规划</h2><h3 id="1-1网站制作流程"><a href="#1-1网站制作流程" class="headerlink" title="1.1网站制作流程"></a>1.1网站制作流程</h3><p> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="783px" viewBox="-0.5 -0.5 783 564" content="&lt;mxfile host=&quot;drawio.misec.top&quot; modified=&quot;2021-01-26T09:57:58.276Z&quot; agent=&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36&quot; version=&quot;13.10.6&quot; etag=&quot;f618rIxoMJ1oays2dnt-&quot; type=&quot;device&quot;&gt;&lt;diagram id=&quot;UQqDQ3jKcC4UO787_tsz&quot; name=&quot;Page-1&quot;&gt;7VrbbuM2EP0aPsbg/fIo2UpbtAW2yEPRR8WibbWK6crKJunXl6QoS7S0u9m1ow3QBgFCDS+iz5kzHI4DyPLh+Yc6P+x+NYWuAIbFMyArgDGiGAP3C4uX1iJ4MGzrsgiDesNd+Y8ORhisj2Whj9HAxpiqKQ+xcW32e71uIlte1+YpHrYxVfzWQ77VI8PdOq/G1t/Lotm1VolFb/9Rl9td92bEVdvzkHeDwyc57vLCPA1MJANkWRvTtK2H56WuHHgdLu2820/0njZW633zmgnp/Q4ff/oN8RX+GX/4cIv+4Pc3YZWPefUYPjDAvLLrpRtjl7W7bl4CFPzvR7fV9KOum9ICdJNX5XYPSOLesd/punS9HuN9c3P0TLo+TA/PvqNbwLa24e//b/rmNyGQ3YJ0CeQSZAwkGUgwyDiQEqTCNVIM1C3IFJAQqMSNcV08DHYWDpQdplwjQa437N26ULv9+CNdaMYRHNj6ppWwfUifdmWj7w752vU82ShibbvmobJPyDbz46HV9aZ81taV05OOXO+mrKqlqUztVyUbudbrtRvU1OYvPei5l4wyGJi5C/tA3XMbdjA97dTRpJ8/qTR00q8NfNo86KZ+sUO6CV3wCjGP0PD81EcQJINtN4wenTEPUWt7WrsXtm0EbX+FzslI59ZbiPMNaR1JgGQF0gxksnMkBhR0LhEay5n4K3ItN5P88bXU95t5+COExfyJCf7YFH/srfjjI/7YgD+rbavzlW/YoACd7K2kU+YaauUZ9dT2HKOO2mwwyzYSHzUkkASkfkEXYmAYo9B/SscY0sgPGBn7wSlRGfrByXh1PxAjPxADP6AglY5CK+g0Aemt5/jWx/iW9dVM/HGYKySm+MMrweFr+HPPQ4/wP1eKz2f6FkguGBpLnExJnLwVtXJErYwkHsRqT+2l16jlOAUp9Yd+AhI6E7UQytwTOKIWQia+N7UkPnmZZN+bVjWilQxoVS42S+qlmwIlB+mZjehivohbMC0LOkWrxPeE83kiLpWxMhmaOHnpFH/0rfjrdjAgkA8I5O6UlakPsPaA9Cdukvis3CqVuox7HgI1shROhlzFBclnItAGgTi0TqVO8woQqzEDhb3jh0dTNzuzNfu8ynprWpvHfeEwX7mA1o/5xZhDQO9P3TQvAb78sTExdwNsUY+te/HnkbX7NI/1Wn/OI/E0BbWu8qb8GL9gCs4w9YMp/SU1UMfxGXVMLFi8SJPXW92EeWe0nDZygdTwSGo0znKly2bddUWG7CaksvYGC13uM1N2utF8OjsthLp/1RF4jVhJY764mpIam5Ia+7RvXBYrx9fMESUW2INrHsv9ttKJK9FZPIqytviXZm97dH5svsxYTNAZvL7y19Xr4ILy6Ed0I8IUuLAx4jo3BhWfX3Ti/Jo6vgha4DcjZXx3fCUplzBQmyYPfFJ2JYcXZCFkjK/EC6XGEOMFnXB8IhbwM2HxMpTHN7N5UUYYXgdmdpZDcz6JMZnGGL8hxniqWj0nxjeIXQlkiugCQoIEgUIiKNVZKEcLqqTgGAlOIebvAv3x6Twv+uJKcYQQah26R5eKOO+hMKJGvgvwv/lkfXeubxPNBaMD+CP0LeLvEH363dH30f0srXEpuw3XUlFKFGFylNYQxhRGTFGmlGIKkmt9v6FiAU2V094bhePymi+hrVyJpS+XC1cib2viqb1mMF+YWcZfoFE/y3/tZkeqtsqa+SKAbaS+yG4bGMjl4Vj4OoCf6xpZmNgOO/eh/taJvt13/HXz0hvL5U4yuk5OFM+RmsiF+dcXAuxj/z16exvt/xuBZP8C&lt;/diagram&gt;&lt;/mxfile&gt;" onclick="(function(svg){var src=window.event.target||window.event.srcElement;while (src!=null&amp;&amp;src.nodeName.toLowerCase()!='a'){src=src.parentNode;}if(src==null){if(svg.wnd!=null&amp;&amp;!svg.wnd.closed){svg.wnd.focus();}else{var r=function(evt){if(evt.data=='ready'&amp;&amp;evt.source==svg.wnd){svg.wnd.postMessage(decodeURIComponent(svg.getAttribute('content')),'*');window.removeEventListener('message',r);}};window.addEventListener('message',r);svg.wnd=window.open('https://viewer.diagrams.net/?client=1&amp;page=0&amp;edit=_blank');}}})(this);" style="cursor:pointer;max-width:100%;max-height:564px;"><defs/><g><ellipse cx="170" cy="90" rx="90" ry="90" fill="#000000" stroke="#000000" transform="translate(2,3)" opacity="0.25"/><ellipse cx="170" cy="90" rx="90" ry="90" fill="#f8cecc" stroke="#b85450" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 90px; margin-left: 81px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 24px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; "><font style="vertical-align: inherit ; font-size: 24px"><font style="vertical-align: inherit ; font-size: 24px"><font style="vertical-align: inherit ; font-size: 24px"><font style="vertical-align: inherit ; font-size: 24px">1，客户沟通制定方案</font></font></font></font></div></div></div></foreignObject><text x="170" y="97" fill="#000000" font-family="Helvetica" font-size="24px" text-anchor="middle" font-weight="bold">1，客户沟通制定方案</text></switch></g><ellipse cx="380" cy="105" rx="75" ry="75" fill="#000000" stroke="#000000" transform="translate(2,3)" opacity="0.25"/><ellipse cx="380" cy="105" rx="75" ry="75" fill="#dae8fc" stroke="#6c8ebf" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 148px; height: 1px; padding-top: 105px; margin-left: 306px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 24px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">2、签订合同</div></div></div></foreignObject><text x="380" y="112" fill="#000000" font-family="Helvetica" font-size="24px" text-anchor="middle" font-weight="bold">2、签订合同</text></switch></g><ellipse cx="279" cy="295" rx="105" ry="105" fill="#000000" stroke="#000000" transform="translate(2,3)" opacity="0.25"/><ellipse cx="279" cy="295" rx="105" ry="105" fill="#f8cecc" stroke="#b85450" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 208px; height: 1px; padding-top: 295px; margin-left: 175px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 24px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">5、前台页面设计后台功能开发</div></div></div></foreignObject><text x="279" y="302" fill="#000000" font-family="Helvetica" font-size="24px" text-anchor="middle" font-weight="bold">5、前台页面设计后台功能开发</text></switch></g><ellipse cx="170" cy="443.51" rx="65" ry="65" fill="#000000" stroke="#000000" transform="translate(2,3)" opacity="0.25"/><ellipse cx="170" cy="443.51" rx="65" ry="65" fill="#60a917" stroke="#2d7600" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 128px; height: 1px; padding-top: 444px; margin-left: 106px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 24px; font-family: Helvetica; color: #ffffff; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">7、上线培训</div></div></div></foreignObject><text x="170" y="451" fill="#ffffff" font-family="Helvetica" font-size="24px" text-anchor="middle" font-weight="bold">7、上线培训</text></switch></g><ellipse cx="65" cy="310" rx="65" ry="65" fill="#000000" stroke="#000000" transform="translate(2,3)" opacity="0.25"/><ellipse cx="65" cy="310" rx="65" ry="65" fill="#008a00" stroke="#005700" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 128px; height: 1px; padding-top: 310px; margin-left: 1px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 24px; font-family: Helvetica; color: #ffffff; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">8、后期维护</div></div></div></foreignObject><text x="65" y="317" fill="#ffffff" font-family="Helvetica" font-size="24px" text-anchor="middle" font-weight="bold">8、后期维护</text></switch></g><ellipse cx="525" cy="240" rx="70" ry="70" fill="#000000" stroke="#000000" transform="translate(2,3)" opacity="0.25"/><ellipse cx="525" cy="240" rx="70" ry="70" fill="#d5e8d4" stroke="#82b366" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 138px; height: 1px; padding-top: 240px; margin-left: 456px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 24px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">3、预付定金</div></div></div></foreignObject><text x="525" y="247" fill="#000000" font-family="Helvetica" font-size="24px" text-anchor="middle" font-weight="bold">3、预付定金</text></switch></g><ellipse cx="335" cy="495" rx="65" ry="65" fill="#000000" stroke="#000000" transform="translate(2,3)" opacity="0.25"/><ellipse cx="335" cy="495" rx="65" ry="65" fill="#e1d5e7" stroke="#9673a6" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 128px; height: 1px; padding-top: 495px; margin-left: 271px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 24px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">6、测试验收</div></div></div></foreignObject><text x="335" y="502" fill="#000000" font-family="Helvetica" font-size="24px" text-anchor="middle" font-weight="bold">6、测试验收</text></switch></g><path d="M 545 417.5 L 583.63 417.5" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 588.88 417.5 L 581.88 421 L 583.63 417.5 L 581.88 414 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><ellipse cx="477.5" cy="417.5" rx="67.5" ry="67.5" fill="#000000" stroke="#000000" transform="translate(2,3)" opacity="0.25"/><ellipse cx="477.5" cy="417.5" rx="67.5" ry="67.5" fill="#ffe6cc" stroke="#d79b00" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 133px; height: 1px; padding-top: 418px; margin-left: 411px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 24px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">4、初稿审核</div></div></div></foreignObject><text x="478" y="425" fill="#000000" font-family="Helvetica" font-size="24px" text-anchor="middle" font-weight="bold">4、初稿审核</text></switch></g><path d="M 265 78.33 L 293.4 78.33 L 293.4 70 L 305 85.63 L 293.4 101.25 L 293.4 92.92 L 265 92.92 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" transform="translate(2,3)" opacity="0.25"/><path d="M 265 78.33 L 293.4 78.33 L 293.4 70 L 305 85.63 L 293.4 101.25 L 293.4 92.92 L 265 92.92 Z" fill="#ffffff" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><path d="M 443.78 155.94 L 477.74 155.94 L 477.74 142.99 L 486.23 161.5 L 477.74 180 L 477.74 167.05 L 443.78 167.05 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" transform="translate(2,3)rotate(45,465,161.5)" opacity="0.25"/><path d="M 443.78 155.94 L 477.74 155.94 L 477.74 142.99 L 486.23 161.5 L 477.74 180 L 477.74 167.05 L 443.78 167.05 Z" fill="#ffffff" stroke="#000000" stroke-miterlimit="10" transform="rotate(45,465,161.5)" pointer-events="all"/><path d="M 500 332.44 L 525.96 332.44 L 525.96 322.99 L 532.45 336.5 L 525.96 350 L 525.96 340.55 L 500 340.55 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" transform="translate(2,3)rotate(120,516.22,336.5)" opacity="0.25"/><path d="M 500 332.44 L 525.96 332.44 L 525.96 322.99 L 532.45 336.5 L 525.96 350 L 525.96 340.55 L 500 340.55 Z" fill="#ffffff" stroke="#000000" stroke-miterlimit="10" transform="rotate(120,516.22,336.5)" pointer-events="all"/><path d="M 384 360.95 L 409.96 360.95 L 409.96 351.5 L 416.45 365 L 409.96 378.51 L 409.96 369.06 L 384 369.06 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" transform="translate(2,3)rotate(-150,400.23,365)" opacity="0.25"/><path d="M 384 360.95 L 409.96 360.95 L 409.96 351.5 L 416.45 365 L 409.96 378.51 L 409.96 369.06 L 384 369.06 Z" fill="#ffffff" stroke="#000000" stroke-miterlimit="10" transform="rotate(-150,400.23,365)" pointer-events="all"/><path d="M 305 409.46 L 330.96 409.46 L 330.96 400 L 337.45 413.51 L 330.96 427.01 L 330.96 417.56 L 305 417.56 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" transform="translate(2,3)rotate(75,321.22,413.51)" opacity="0.25"/><path d="M 305 409.46 L 330.96 409.46 L 330.96 400 L 337.45 413.51 L 330.96 427.01 L 330.96 417.56 L 305 417.56 Z" fill="#ffffff" stroke="#000000" stroke-miterlimit="10" transform="rotate(75,321.22,413.51)" pointer-events="all"/><path d="M 232.55 479.46 L 258.51 479.46 L 258.51 470 L 265 483.51 L 258.51 497.01 L 258.51 487.56 L 232.55 487.56 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" transform="translate(2,3)rotate(-150,248.77,483.51)" opacity="0.25"/><path d="M 232.55 479.46 L 258.51 479.46 L 258.51 470 L 265 483.51 L 258.51 497.01 L 258.51 487.56 L 232.55 487.56 Z" fill="#ffffff" stroke="#000000" stroke-miterlimit="10" transform="rotate(-150,248.77,483.51)" pointer-events="all"/><path d="M 90 388.48 L 110.9 388.48 L 110.9 378.51 L 122.45 392.02 L 110.9 405.52 L 110.9 395.56 L 90 395.56 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" transform="translate(2,3)rotate(-120,106.22,392.02)" opacity="0.25"/><path d="M 90 388.48 L 110.9 388.48 L 110.9 378.51 L 122.45 392.02 L 110.9 405.52 L 110.9 395.56 L 90 395.56 Z" fill="#ffffff" stroke="#000000" stroke-miterlimit="10" transform="rotate(-120,106.22,392.02)" pointer-events="all"/><rect x="590" y="390" width="190" height="60" rx="9" ry="9" fill="#000000" stroke="#000000" transform="translate(2,3)" opacity="0.25"/><rect x="590" y="390" width="190" height="60" rx="9" ry="9" fill="#ffe6cc" stroke="#d79b00" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 188px; height: 1px; padding-top: 420px; margin-left: 591px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">网页美工会制作原型图和psd效果图</div></div></div></foreignObject><text x="685" y="424" fill="#000000" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">网页美工会制作原型图和psd效果图</text></switch></g></g><switch><g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/><a transform="translate(0,-5)" xlink:href="https://desk.draw.io/support/solutions/articles/16000042487" target="_blank"><text text-anchor="middle" font-size="10px" x="50%" y="100%">Viewer does not support full SVG 1.1</text></a></switch></svg></p>
+<h3 id="1-2项目整体介绍"><a href="#1-2项目整体介绍" class="headerlink" title="1.2项目整体介绍"></a>1.2项目整体介绍</h3> <ul>
+    <li>项目名称：品优购</li>
+    <li>项目描述：该项目是一个电商网站，我们要完成PC端首页、列表页、注册页面的注册</li>
+ </ul>
+
+<h3 id="1-3开发工具以及技术栈"><a href="#1-3开发工具以及技术栈" class="headerlink" title="1.3开发工具以及技术栈"></a>1.3开发工具以及技术栈</h3><h4 id="1、开发工具"><a href="#1、开发工具" class="headerlink" title="1、开发工具"></a>1、开发工具</h4><p><b>VScode、Photoshop、Chrome</b></p>
+<h4 id="2、技术栈"><a href="#2、技术栈" class="headerlink" title="2、技术栈"></a>2、技术栈</h4> <ul>
+    <li>利用HTML5+CSS3布局，可以大量使用H5新增标签和样式</li>
+    <li>采取结构与样式相分离，模块化开发</li>
+    <li>遵循代码规范</li>
+ </ul>
+
+<h3 id="1-4项目搭建工作"><a href="#1-4项目搭建工作" class="headerlink" title="1.4项目搭建工作"></a>1.4项目搭建工作</h3><h4 id="1、需要创建如下文件夹"><a href="#1、需要创建如下文件夹" class="headerlink" title="1、需要创建如下文件夹"></a>1、需要创建如下文件夹</h4> <table>
+        <table border="1">
+            <tr>
+                <th>名称</th>
+                <th>说明</th>
+            </tr>
+            <tr>
+                <td>项目文件夹</td>
+                <td>onlineRetailers</td>
+            </tr>
+           <tr>
+                <td>样式类图片文件夹</td>
+                <td>images</td>
+            </tr>
+             <tr>
+                <td>样式文件夹</td>
+                <td>css</td>
+            </tr>
+             <tr>
+                <td>产品类图片文件夹</td>
+                <td>upload</td>
+            </tr>
+             <tr>
+                <td>字体类文件夹</td>
+                <td>fonts</td>
+            </tr>
+             <tr>
+                <td>脚本文件夹</td>
+                <td>js</td>
+            </tr>
+        </table>
+
+<h4 id="2、需要创建如下文件"><a href="#2、需要创建如下文件" class="headerlink" title="2、需要创建如下文件"></a>2、需要创建如下文件</h4> <table>
+        <table border="1">
+            <tr>
+                <th>名称</th>
+                <th>说明</th>
+            </tr>
+            <tr>
+                <td>首页</td>
+                <td>index.html</td>
+            </tr>
+           <tr>
+                <td>CSS初始样式文件</td>
+                <td>base.css</td>
+            </tr>
+            <tr>
+                <td>CSS公共样式文件</td>
+                <td>common.css</td>
+            </tr>
+        </table>
+
+<h4 id="3、模块开发"><a href="#3、模块开发" class="headerlink" title="3、模块开发"></a>3、模块开发</h4><p> 本项目采用模块开发，主要用到的就是样式的复用。</p>
+<h3 id="1-5-网站-favicon-图标"><a href="#1-5-网站-favicon-图标" class="headerlink" title="1.5 网站 favicon 图标"></a>1.5 网站 favicon 图标</h3><p><b style="color: red;">favicon.ico</b>一般作为缩略的网站标志，它显示在浏览器的地址栏或者标签上。</br><br>目前主要的浏览器都支持favicon.ico图标。</br></p>
+<h4 id="1、制作图标"><a href="#1、制作图标" class="headerlink" title="1、制作图标"></a>1、制作图标</h4><p>（1）使用PS把图标切成png图片。</br><br>（2）把png图片转换为ico图标，这里用到第三方转换网站：</br></p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.bitbug.net/</span><br></pre></td></tr></table></figure>
+
+<p>（3）HTML页面引入favicon图标。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;shortcut icon&quot;</span> <span class="attr">href</span>=<span class="string">&quot;favicon.ico&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="1-6-网站TDK三大标签SEO优化"><a href="#1-6-网站TDK三大标签SEO优化" class="headerlink" title="1.6 网站TDK三大标签SEO优化"></a>1.6 网站TDK三大标签SEO优化</h3><p><b style="color: red;">SEO(Search Engine Optimization--搜索引擎优化)</b>，是一种利用搜索引擎的规则提高网站在有关搜索引擎内自然排名的方式。<p>
+<p>SEO的目的是对网站进行深度优化，从而帮助网站获取免费的流量，进而在搜索引擎上提升网站的排名，提高网站知名度。</p>
+<p>页面必须有三个标签来符合SEO优化。</p>
+
+<p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="501px" viewBox="-0.5 -0.5 501 311" content="&lt;mxfile host=&quot;drawio.misec.top&quot; modified=&quot;2021-01-27T08:50:04.751Z&quot; agent=&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36&quot; etag=&quot;oojLwgTmaso_rcSPYPyJ&quot; version=&quot;13.10.6&quot; type=&quot;device&quot;&gt;&lt;diagram id=&quot;Qb3pYTlGoH9oHIeLFGmL&quot; name=&quot;Page-1&quot;&gt;3Vddb5swFP01fmwFmK88pkm6Tmqlan3Y+ujAJXglmBmngf36mWC+aZNGpJsmRYp97/X19TnHXEB4sc2+cJKED8yHCBmanyG8RIahm4aBip/m56XFsZVhw6mvghrDE/0Nyqgp6476kHYCBWORoEnX6LE4Bk90bIRztu+GBSzq7pqQDQwMTx6Jhtbv1BdhaXUNp7HfAd2E1c66PSs9W1IFq5OkIfHZvmXCK4QXnDFRjrbZAqICvAqXct3tG966MA6xOGVBlt4/3N4TskzY113+Lf+Z3cVXKssriXbqwMiwI5nvJmAyraxa5AoK+9eOVY6r9EDUXAZgI8kapxxtin9BhVymUsmaymylT8FRJzY428U+FGXq0r0PqYCnhHiFdy9VJW2h2EbKHdAoWrCI8cNa7BNwA0/aU8HZC7Q8tufCOqj3ewUuIHsTO71mREoZ2BYEz2VItcBWJCoV6zM13zeaqGPCth40ZSRKh5s6d0OVHCi2PsCcMWBO3hOP00RQFk8LsQWub45B7BprbNtKE+ruYmMayLF5AuSW/ZmQ4wHkL5DvGfcnhTsIwPZGFe07s7U83EXgtvRT4P5UhZvDZ9PKRDcucmdoZaG5ieYOWtloriFXDhw0X6Kb1YALuZNsFnCcB5ImZQcJaFZwNyDG9WCcmLVrmdaFiMGm2yEG2yPEmGPEmJcixhppGj3QZbNLimEQQTYv2rAEA2JfDZdeRNKUel38IaPihxxr17aaPReeaw2r6bKARKsmeWvyCJzKswFXtnObBPiDt4EeT/KUbMc9ONZTh3y2+Bq7R5WNQ0QEfe2WMUah2uGR0UOjruSiaeNyqVKU5atV7deFfqLe89fs33NB+AbEIJGkmOStsKQISN8p2OgV7Gpn1dUIuqygkXfNwfmKty+teKut+PflHsujtBYV0+e2r1l2mFXrPt7UJ7wSCq5SMsce+X/t6sx6yjLOvDpmT6LYOe3qTKVW599R68ffbSZUHf4/1NRPpE+lJjltPj/L8OYjHq/+AA==&lt;/diagram&gt;&lt;/mxfile&gt;" onclick="(function(svg){var src=window.event.target||window.event.srcElement;while (src!=null&amp;&amp;src.nodeName.toLowerCase()!='a'){src=src.parentNode;}if(src==null){if(svg.wnd!=null&amp;&amp;!svg.wnd.closed){svg.wnd.focus();}else{var r=function(evt){if(evt.data=='ready'&amp;&amp;evt.source==svg.wnd){svg.wnd.postMessage(decodeURIComponent(svg.getAttribute('content')),'*');window.removeEventListener('message',r);}};window.addEventListener('message',r);svg.wnd=window.open('https://viewer.diagrams.net/?client=1&amp;page=0&amp;edit=_blank');}}})(this);" style="cursor:pointer;max-width:100%;max-height:311px;"><defs/><g><rect x="0" y="0" width="160" height="100" rx="15" ry="15" fill="#dae8fc" stroke="#6c8ebf" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 158px; height: 1px; padding-top: 50px; margin-left: 1px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; "><font style="font-size: 32px">title</font></div></div></div></foreignObject><text x="80" y="54" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">title</text></switch></g><rect x="180" y="0" width="156" height="100" rx="15" ry="15" fill="#d5e8d4" stroke="#82b366" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 154px; height: 1px; padding-top: 50px; margin-left: 181px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 32px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">description</div></div></div></foreignObject><text x="258" y="60" fill="#000000" font-family="Helvetica" font-size="32px" text-anchor="middle">description</text></switch></g><rect x="350" y="0" width="150" height="100" rx="15" ry="15" fill="#ffe6cc" stroke="#d79b00" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 148px; height: 1px; padding-top: 50px; margin-left: 351px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 32px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">keyword</div></div></div></foreignObject><text x="425" y="60" fill="#000000" font-family="Helvetica" font-size="32px" text-anchor="middle">keyword</text></switch></g><ellipse cx="258" cy="240" rx="70" ry="70" fill="#f8cecc" stroke="#b85450" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 138px; height: 1px; padding-top: 240px; margin-left: 189px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 32px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">三大标签</div></div></div></foreignObject><text x="258" y="250" fill="#000000" font-family="Helvetica" font-size="32px" text-anchor="middle">三大标签</text></switch></g><path d="M 92.27 106.37 L 100.32 100.44 L 163.8 186.73 L 169.75 192.68 L 177.17 185.25 L 179.65 209.65 L 155.25 207.17 L 162.68 199.75 L 156.73 193.8 Q 156.2 193.27 155.75 192.66 Z" fill="#dae8fc" stroke="#6c8ebf" stroke-linejoin="round" stroke-miterlimit="10" pointer-events="all"/><path d="M 169.75 192.68 L 177.17 185.25 L 179.65 209.65 L 155.25 207.17 L 162.68 199.75" fill="none" stroke="#6c8ebf" stroke-linejoin="flat" stroke-miterlimit="4" pointer-events="all"/><path d="M 253 100.5 L 263 100.5 L 263 150.5 L 273.5 150.5 L 258 169.5 L 242.5 150.5 L 253 150.5 Z" fill="#d5e8d4" stroke="#82b366" stroke-linejoin="round" stroke-miterlimit="10" pointer-events="all"/><path d="M 420.77 97.29 L 428.61 103.5 L 346.02 207.81 L 354.26 214.33 L 330.31 219.61 L 329.95 195.09 L 338.18 201.61 Z" fill="#ffe6cc" stroke="#d79b00" stroke-linejoin="round" stroke-miterlimit="10" pointer-events="all"/></g><switch><g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/><a transform="translate(0,-5)" xlink:href="https://desk.draw.io/support/solutions/articles/16000042487" target="_blank"><text text-anchor="middle" font-size="10px" x="50%" y="100%">Viewer does not support full SVG 1.1</text></a></switch></svg></p>
+<h4 id="1、title网站标题"><a href="#1、title网站标题" class="headerlink" title="1、title网站标题"></a>1、title网站标题</h4><p>title具有不可替代性，是我们内页的第一个重要标签，是搜索引擎了解网页入口和对网页主题归属的最佳判断点。<br>建议：<b style="color: red;">网站名（产品名）-网站的介绍（尽量不要超过30个汉字）</b><br>例如：</br></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>品优购商城-综合购物首选-正品价低、品质保证、配送及时、轻松购物！<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2、description网站说明"><a href="#2、description网站说明" class="headerlink" title="2、description网站说明"></a>2、description网站说明</h4><p><b style="color: red;">简要说明我们的网站是做什么的。</b><br>例如：</br></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;Description&quot;</span> <span class="attr">content</span>=<span class="string">&quot;品优购商城-专业的综合网上购物平台，销售家电、数码通讯、电脑。&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="keywords关键字"><a href="#keywords关键字" class="headerlink" title="keywords关键字"></a>keywords关键字</h4><p><b style="color: red;">keywords是页面的关键词，是搜索引擎的关注点之一。</b><br>keywords最好限制为6~8个关键词，关键词之间用英文逗号隔开，采用<b style="color: red;">关键词1,关键词2</b>的形式。</br><br>例如：</br></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;Keywords&quot;</span> <span class="attr">content</span>=<span class="string">&quot;网上购物,网上商城,手机,电脑&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="二、品优购首页制作"><a href="#二、品优购首页制作" class="headerlink" title="二、品优购首页制作"></a>二、品优购首页制作</h2><h2 id="三、品优购列表制作"><a href="#三、品优购列表制作" class="headerlink" title="三、品优购列表制作"></a>三、品优购列表制作</h2><h2 id="四、品优购注册页制作"><a href="#四、品优购注册页制作" class="headerlink" title="四、品优购注册页制作"></a>四、品优购注册页制作</h2><h2 id="五、域名注册与网站上传"><a href="#五、域名注册与网站上传" class="headerlink" title="五、域名注册与网站上传"></a>五、域名注册与网站上传</h2> 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2021/01/23/%E5%9F%BA%E4%BA%8Ehtml%E5%92%8Ccss%E7%9A%84%E7%94%B5%E5%95%86%E9%A1%B9%E7%9B%AE/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%88%86%E4%BA%AB/" rel="tag">分享</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AF%BC%E8%88%AA/" rel="tag">导航</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2021/01/27/WebPack/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            WebPack实战教程
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2021/01/20/HTML5+CSS3/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">HTML5+CSS3基础到实战</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "",
+    app_key: "",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+<div class="gitalk" id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.6.2/dist/gitalk.css">
+
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.6.2/dist/gitalk.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+
+<script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: [''],
+    // id: location.pathname,      // Ensure uniqueness and length less than 50
+    id: md5(location.pathname),
+    distractionFreeMode: false,  // Facebook-like distraction free mode
+    pagerDirection: 'last'
+  })
+
+  gitalk.render('gitalk-container')
+</script>
+  
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2020-2021
+        <i class="ri-heart-fill heart_icon"></i> 杨鹏飞
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        
+        Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+        <span class="division">|</span>
+        Theme - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></s>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+      <li>
+          <img src="/images/beian.png"></img>
+          <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=01234567890123" target="_black" rel="nofollow">浙公网安备01234567890123号</a>
+      </li>
+        
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="MyBlog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/picture">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/photo">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/zhibubao.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/weixin.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: 'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto'
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+<!-- MathJax -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true
+  }
+</script>
+
+<!-- Katex -->
+
+
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        
+    
+
+
+<!-- busuanzi  -->
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script>
+
+<script src="/js/clickBoom1.js"></script>
+
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+
+
+<link rel="stylesheet" href="/css/clipboard.css">
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+
+
+<!-- CanvasBackground -->
+
+
+<script src="/js/dz.js"></script>
+
+
+
+    
+  </div>
+</body>
+
+</html>

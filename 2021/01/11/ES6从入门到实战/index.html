@@ -85,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">2.6k</span>
+            <span class="post-count">3.1k</span>
         </span>
     </span>
 
@@ -94,7 +94,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">11 min</span>
+            <span class="post-count">14 min</span>
         </span>
     </span>
 </div>
@@ -109,7 +109,7 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fs4.51cto.com%2Fimages%2Fblog%2F202101%2F11%2F26ace1ea8390ea14d9c4ade550586b3d.jpeg&refer=http%3A%2F%2Fs4.51cto.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1613301030&t=dd0b72cf7f016790a0e2f2acb4c16103"></p>
+  <p><img src="https://img9.51tietu.net/pic/2019-091313/gh2fn2n0l1jgh2fn2n0l1j.jpg"></p>
 <a id="more"></a>
 <h1 id="ES6从入门到实战"><a href="#ES6从入门到实战" class="headerlink" title="ES6从入门到实战"></a>ES6从入门到实战</h1><h2 id="一、let变量声明以及声明特性"><a href="#一、let变量声明以及声明特性" class="headerlink" title="一、let变量声明以及声明特性"></a>一、let变量声明以及声明特性</h2><h3 id="1、let声明变量"><a href="#1、let声明变量" class="headerlink" title="1、let声明变量"></a>1、let声明变量</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a;</span><br><span class="line"><span class="keyword">let</span> b,c,d;</span><br><span class="line"><span class="keyword">let</span> e = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">let</span> f = <span class="number">521</span>, g = <span class="string">&#x27;hello&#x27;</span> , h = [];</span><br></pre></td></tr></table></figure>
 
@@ -248,8 +248,37 @@
 <p>（2）在对象内部添加Symbol对象</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> dys = &#123;</span><br><span class="line">    people: [<span class="string">&#x27;岳云鹏&#x27;</span>, <span class="string">&#x27;张鹤伦&#x27;</span>],</span><br><span class="line">    [<span class="built_in">Symbol</span>(<span class="string">&#x27;move&#x27;</span>)]: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;说相声&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(dys);</span><br></pre></td></tr></table></figure>
 
-<h3 id="3、Symbol的内置属性"><a href="#3、Symbol的内置属性" class="headerlink" title="3、Symbol的内置属性"></a>3、Symbol的内置属性</h3><h2 id="十一、迭代器"><a href="#十一、迭代器" class="headerlink" title="十一、迭代器"></a>十一、迭代器</h2><p>###</p>
- 
+<h3 id="3、Symbol的内置属性"><a href="#3、Symbol的内置属性" class="headerlink" title="3、Symbol的内置属性"></a>3、Symbol的内置属性</h3><p>除了定义自己使用Symbol值以外，ES6还提供了11个内置Symbol值，指向语言内部使用的方法。</p>
+<table border="1">
+            <tr>
+                <th>属性值</th>
+                <th>说明</th>
+            </tr>
+            <tr>
+                <td>Symbol.hasInstance</td>
+                <td>当其他对象使用instanceof运算符，判断是否为该对象的实例时，会调用这个方法。</td>
+            </tr>
+           <tr>
+                <td>Symbol.isConcatSpreadable</td>
+                <td>该属性是一个布尔值，表示该对象用于Array.prototype.concat()时，是否可以展开。</td>
+            </tr>
+        </table>
+
+<p>例子：</p>
+<p>Symbol.hasInstance</p>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">class Person&#123;</span><br><span class="line">    static [Symbol.hasInstance](param)&#123;</span><br><span class="line">        console.log(param);</span><br><span class="line">        console.log(&quot;我被用来检测类型了&quot;);</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">let o &#x3D; &#123;&#125;;</span><br><span class="line">console.log(o instanceof Person);</span><br></pre></td></tr></table></figure>
+
+<p>Symbol.isConcatSpreadable</p>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const arr &#x3D; [1,2,3];</span><br><span class="line">const arr2 &#x3D; [4,5,6];</span><br><span class="line">arr2[Symbol.isConcatSpreadable] &#x3D; false;</span><br><span class="line">console.log(arr.concat(arr2));</span><br></pre></td></tr></table></figure>
+
+<h2 id="十一、迭代器"><a href="#十一、迭代器" class="headerlink" title="十一、迭代器"></a>十一、迭代器</h2><h3 id="1、迭代器的介绍以及原理"><a href="#1、迭代器的介绍以及原理" class="headerlink" title="1、迭代器的介绍以及原理"></a>1、迭代器的介绍以及原理</h3><p>迭代器(Iterator)是一种接口，为各种不同的数据结构提供统一的访问机制。任何数据结构只要部署了Iterator接口，就可以完成遍历操作。</br><br>(1)ES6创建了一种新的遍历命令for…of循环，Iterator接口主要提供for…of消费。</br><br>(2)原生具备Iterator接口的数据(可用for…of遍历)</br><br>Array、Arguments、Set、Map、String、TypedArray、NodeList</br><br>(3)工作原理</br><br>(a)创建一个指针对象，指向当前数据结构的起始位置。</br><br>(b)第一次调用对象的next方法，指针自动指向数据结构的第一个成员。</br><br>(c)接下来不断调用next方法，指针一直往后移动，直到最后一个成员。</br><br>(d)每调用一次next方法，就返回一个包含vale和done属性的对象。</br><br><b style="color: red;">注意：需要自定义遍历数据的时候，要想到迭代器。</b></p>
+<p>例子：</br></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> xy = [<span class="string">&#x27;t&#x27;</span>,<span class="string">&#x27;s&#x27;</span>,<span class="string">&#x27;z&#x27;</span>,<span class="string">&#x27;shs&#x27;</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> v <span class="keyword">of</span> xy)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(v);</span><br><span class="line">&#125;<span class="comment">//循环数组</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(xy);<span class="comment">//在控制台可以看到Symbol(Symbol.iterator): ƒ values()</span></span><br></pre></td></tr></table></figure>
+
+<p>上一个例子的原理</br></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">const</span> xy = [<span class="string">&#x27;t&#x27;</span>,<span class="string">&#x27;s&#x27;</span>,<span class="string">&#x27;z&#x27;</span>,<span class="string">&#x27;shs&#x27;</span>];</span><br><span class="line">    <span class="keyword">let</span> iterator = xy[<span class="built_in">Symbol</span>.iterator]();</span><br><span class="line">    <span class="built_in">console</span>.log(iterator.next());</span><br><span class="line">    <span class="built_in">console</span>.log(iterator.next());</span><br><span class="line">    <span class="built_in">console</span>.log(iterator.next());</span><br><span class="line">    <span class="built_in">console</span>.log(iterator.next());</span><br><span class="line">    <span class="built_in">console</span>.log(iterator.next());</span><br><span class="line"></span><br><span class="line"><span class="comment">/**返回结果</span></span><br><span class="line"><span class="comment">*&#123;value: &quot;t&quot;, done: false&#125;</span></span><br><span class="line"><span class="comment">10-迭代器.html:19 &#123;value: &quot;s&quot;, done: false&#125;</span></span><br><span class="line"><span class="comment">10-迭代器.html:20 &#123;value: &quot;z&quot;, done: false&#125;</span></span><br><span class="line"><span class="comment">10-迭代器.html:21 &#123;value: &quot;shs&quot;, done: false&#125;</span></span><br><span class="line"><span class="comment">10-迭代器.html:22 &#123;value: undefined, done: true&#125;</span></span><br><span class="line"><span class="comment">*/</span> </span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
       <div id="reword-out">
@@ -342,9 +371,9 @@
       </a>
     
     
-      <a href="/2020/10/15/%E5%B0%86tp%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A/" class="article-nav-link">
+      <a href="/2020/10/15/%E6%90%AD%E5%BB%BA%E9%98%BF%E9%87%8C%E4%BA%91esc%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">将tp项目部署到服务器上</div>
+        <div class="article-nav-title">配置阿里云esc服务器</div>
       </a>
     
   </nav>
