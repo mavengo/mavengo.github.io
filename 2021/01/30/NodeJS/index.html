@@ -85,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">295</span>
+            <span class="post-count">1.4k</span>
         </span>
     </span>
 
@@ -94,7 +94,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">1 min</span>
+            <span class="post-count">5 min</span>
         </span>
     </span>
 </div>
@@ -121,7 +121,45 @@
 <h3 id="3、环境搭建"><a href="#3、环境搭建" class="headerlink" title="3、环境搭建"></a>3、环境搭建</h3><p>(1)官网： <a target="_blank" rel="noopener" href="https://nodejs.org/en/">https://nodejs.org/en/</a></p>
 <p>(2)开发环境Visual Studio Code: <a target="_blank" rel="noopener" href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></p>
 <p>(3)开发环境关于Nodejs的提示工具：Node Snippets</p>
-<h2 id="二、HTTP模块、URL模块、supervisor工具"><a href="#二、HTTP模块、URL模块、supervisor工具" class="headerlink" title="二、HTTP模块、URL模块、supervisor工具"></a>二、HTTP模块、URL模块、supervisor工具</h2> 
+<h2 id="二、HTTP模块、URL模块、supervisor工具"><a href="#二、HTTP模块、URL模块、supervisor工具" class="headerlink" title="二、HTTP模块、URL模块、supervisor工具"></a>二、HTTP模块、URL模块、supervisor工具</h2><h3 id="1、HTTP模块"><a href="#1、HTTP模块" class="headerlink" title="1、HTTP模块"></a>1、HTTP模块</h3><p>(1)引入HTTP模块并创建HTTP模块</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1、引入http模块</span></span><br><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * request    ：客户端传过来的信息</span></span><br><span class="line"><span class="comment"> * response   ：响应客户端的信息</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">http.createServer(<span class="function"><span class="keyword">function</span> (<span class="params">request, response</span>) </span>&#123;<span class="comment">//创建一个http请求</span></span><br><span class="line"> <span class="comment">// 设置响应头</span></span><br><span class="line">  response.writeHead(<span class="number">200</span>, &#123;<span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;text/html;charset:&quot;utf-8&quot;&#x27;</span>&#125;);</span><br><span class="line">  response.write(<span class="string">&quot;&lt;head&gt;&lt;meta charset=&#x27;UTF-8&#x27;&gt;&lt;/head&gt;&quot;</span>);<span class="comment">//解决乱码问题</span></span><br><span class="line">  <span class="comment">//使用write方法向客户端输出内容。   </span></span><br><span class="line">  response.write(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">  <span class="comment">// 在界面输出一句话，并结束相应</span></span><br><span class="line">  response.end(<span class="string">&#x27;Hello 你好&#x27;</span>);<span class="comment">//此处如果不结束，网页会一直处在加载状态。</span></span><br><span class="line">&#125;).listen(<span class="number">8081</span>);<span class="comment">//监听的端口号</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;Server running at http://127.0.0.1:8081/&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、URL模块"><a href="#2、URL模块" class="headerlink" title="2、URL模块"></a>2、URL模块</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//引入url模块</span></span><br><span class="line"><span class="keyword">const</span> url = <span class="built_in">require</span>(<span class="string">&quot;url&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> api = <span class="string">&#x27;http://www.baidu.com?name=ypf&amp;age=23&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> getValue = url.parse(api,<span class="literal">true</span>).query;<span class="comment">//使用url的parse方法解析地址。</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(getValue);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`姓名： <span class="subst">$&#123;getValue.name&#125;</span> --年龄：<span class="subst">$&#123;getValue.age&#125;</span> `</span>);<span class="comment">//使用了ES6的模板语法。</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="3、综合HTTP、URL练习"><a href="#3、综合HTTP、URL练习" class="headerlink" title="3、综合HTTP、URL练习"></a>3、综合HTTP、URL练习</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//引入http \ url模块</span></span><br><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> url = <span class="built_in">require</span>(<span class="string">&#x27;url&#x27;</span>);</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * reques    ：客户端传过来的信息</span></span><br><span class="line"><span class="comment"> * response  ：响应客户端的信息</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">http.createServer( <span class="function">(<span class="params">request, response</span>) =&gt;</span> &#123;<span class="comment">//创建一个http请求，此处使用了ES6模板语法。</span></span><br><span class="line"><span class="comment">// 设置响应头</span></span><br><span class="line">  response.writeHead(<span class="number">200</span>, &#123;<span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;text/html;charset:&quot;utf-8&quot;&#x27;</span>&#125;);</span><br><span class="line">  response.write(<span class="string">&quot;&lt;head&gt;&lt;meta charset=&#x27;UTF-8&#x27;&gt;&lt;/head&gt;&quot;</span>);<span class="comment">//解决乱码问题</span></span><br><span class="line"> </span><br><span class="line">  <span class="comment">// console.log(request.url);</span></span><br><span class="line">  <span class="keyword">if</span> (request.url!==<span class="string">&#x27;/favicon.ico&#x27;</span>) &#123;<span class="comment">//判断是否是网站图标请求。</span></span><br><span class="line">    <span class="keyword">var</span> userinfo = url.parse(request.url,<span class="literal">true</span>).query;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;姓名： &#x27;</span> + userinfo.name + <span class="string">&#x27; 年龄： &#x27;</span> + userinfo.age)</span><br><span class="line">  &#125;</span><br><span class="line">  response.end(<span class="string">&quot;服务已经开启&quot;</span>);</span><br><span class="line">  </span><br><span class="line">&#125;).listen(<span class="number">8081</span>);<span class="comment">//监听的端口号</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;Server running at http://127.0.0.1:8081/&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、自启动工具-supervisor"><a href="#4、自启动工具-supervisor" class="headerlink" title="4、自启动工具 supervisor"></a>4、自启动工具 supervisor</h3><h4 id="4-1-工具介绍"><a href="#4-1-工具介绍" class="headerlink" title="4.1 工具介绍"></a>4.1 工具介绍</h4><p>supervisor会不停的watch你应用下的所有文件，发现有文件修改，就重新载入程序文件，这样就实现了部署，修改了程序文件后马上就能看到更改后的结果，即实现了自动重启项目，每次修改完代码无需手动重启项目。</br></p>
+<h4 id="4-2-使用步骤"><a href="#4-2-使用步骤" class="headerlink" title="4.2 使用步骤"></a>4.2 使用步骤</h4><p><b style="color:#c3f4be">1、安装supervisor</b></p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g supervisor</span><br></pre></td></tr></table></figure>
+
+<p><b style="color:#c3f4be">2、使用supervisor代替node命令启动应用</b></p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">supervisor server.js</span><br></pre></td></tr></table></figure>
+
+<p><b style="color:#c3f4be">3、使用npm可能安装失败，可以使用cnpm替代npm安装</b></p>
+<p>cnpm安装步骤网址：<a target="_blank" rel="noopener" href="https://developer.aliyun.com/mirror/NPM?from=tnpm">https://developer.aliyun.com/mirror/NPM?from=tnpm</a></br></p>
+<p>安装命令：</br></p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry-https:registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<h2 id="三、CommonJs-和-Nodejs-模块、自定义模块"><a href="#三、CommonJs-和-Nodejs-模块、自定义模块" class="headerlink" title="三、CommonJs 和 Nodejs 模块、自定义模块"></a>三、CommonJs 和 Nodejs 模块、自定义模块</h2><h3 id="1、CommonJs"><a href="#1、CommonJs" class="headerlink" title="1、CommonJs"></a>1、CommonJs</h3><h4 id="1-1-CommonJs简介"><a href="#1-1-CommonJs简介" class="headerlink" title="1.1 CommonJs简介"></a>1.1 CommonJs简介</h4><p>JavaScript标准定义了API是为了构建基于浏览器的应用程序。并没有制定一个用于跟广泛的应用程序的标准库。<b style="color:#c3f4be">CommonJS规范的提出，主要是为了弥补当前JavaScript没有标准库的缺陷。它的终极目标：提供一个类似Python、Ruby和Java语言的标准库。而不只让JavaScript停留在小脚本的程序阶段。</b>用CommonJS API编写的应用，不仅可以利用JavaScript开发客户端应用，而且还可以编写一下应用：</br></p>
+<ul>
+  <li>服务端JavaScript应用程序。（nodejs）</li>
+  <li>命令行工具。</li>
+  <li>桌面图形界面应用程序。</li>
+</ul>
+
+<p><b style="color:#c3f4be">综述：CommonJS就是模块化标准，nodejs就是CommonJS(模块化)的实现。</b></p>
+<h3 id="2、Nodejs中的模块化"><a href="#2、Nodejs中的模块化" class="headerlink" title="2、Nodejs中的模块化"></a>2、Nodejs中的模块化</h3><p><b style="color:#c3f4be">Node应用由模块组成，采用CommonJS模块规范。</b></p>
+<h4 id="2-1-在Node中，模块分为两类："><a href="#2-1-在Node中，模块分为两类：" class="headerlink" title="2.1 在Node中，模块分为两类："></a>2.1 在Node中，模块分为两类：</h4><ul>
+  <li><b style="color:#c3f4be">1、核心模块</b>部分在Node源代码的编译过程中，编译进了二进制执行文件。在Node进程启动时，部分核心模块就被直接加载进内存中，所以这部分核心模块进入时，文件定位和编译执行这两个步骤可以省略掉，并且在路径分析中优先判断，所以他的加载速度是最快的。</br>
+  <b>如：HTTP模块、URL模块、Fs模块都是nodejs内置核心模块，可以直接引入使用。</b>
+  </li>
+  <li><b style="color:#c3f4be">2、文件模块</b>则是在运行时动态加载，需要完成的路径分析、文件定位、编译执行过程、速度相比核心模块稍微慢一些，但是用的非常多。</br>
+  <b>这些模块需要我们自己定义。</b>
+  </li>
+</ul>
+
+<h4 id="2-2-文件模块-自定义模块"><a href="#2-2-文件模块-自定义模块" class="headerlink" title="2.2 文件模块-自定义模块"></a>2.2 文件模块-自定义模块</h4><p>1、把公共功能抽取为一个独立的 js 文件作为一个模块，通过 exports 或者 module.exports 暴露属性或方法。</br><br>2、通过 require 引入模块。</p>
+ 
       <!-- reward -->
       
       <div id="reword-out">
@@ -203,6 +241,15 @@
 
    
   <nav class="article-nav">
+    
+      <a href="/2021/02/03/mouse/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            mouse
+          
+        </div>
+      </a>
     
     
       <a href="/2021/01/27/WebPack/" class="article-nav-link">

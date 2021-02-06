@@ -85,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">116</span>
+            <span class="post-count">433</span>
         </span>
     </span>
 
@@ -115,9 +115,33 @@
 
 <a id="more"></a>
 
-<h1 id="WebPack从入门到精通"><a href="#WebPack从入门到精通" class="headerlink" title="WebPack从入门到精通"></a>WebPack从入门到精通</h1><h2 id="一、学前准备"><a href="#一、学前准备" class="headerlink" title="一、学前准备"></a>一、学前准备</h2><h3 id="1、环境参数"><a href="#1、环境参数" class="headerlink" title="1、环境参数"></a>1、环境参数</h3><p>(1)Nodejs 10版本以上</br><br>(2)Webpack 4.26版本以上</br></p>
+<h1 id="WebPack从入门到精通"><a href="#WebPack从入门到精通" class="headerlink" title="WebPack从入门到精通"></a>WebPack从入门到精通</h1><h2 id="学前准备"><a href="#学前准备" class="headerlink" title="学前准备"></a>学前准备</h2><h3 id="1、环境参数"><a href="#1、环境参数" class="headerlink" title="1、环境参数"></a>1、环境参数</h3><p>(1)Nodejs 10版本以上</br><br>(2)Webpack 4.26版本以上</br></p>
 <h3 id="2、预备技能"><a href="#2、预备技能" class="headerlink" title="2、预备技能"></a>2、预备技能</h3><p>(1)基本Nodejs知识和npm指令</br><br>(2)熟悉ES6语法</br></p>
- 
+<h2 id="第-1-章-Webpack简介"><a href="#第-1-章-Webpack简介" class="headerlink" title="第 1 章 Webpack简介"></a>第 1 章 Webpack简介</h2><h3 id="1-1-Webpack是什么？"><a href="#1-1-Webpack是什么？" class="headerlink" title="1.1 Webpack是什么？"></a>1.1 Webpack是什么？</h3><p>Webpack是一种前端资源构建工具，一个静态模块打包器(module bundler)。</br><br>在Webpack看来，前端的所有资源文件(js/json/css/img/less/…)都会作为模块处理。</br><br>它将根据模块的依赖关系进行静态分析，打包生成对应的静态资源(bundle)。</br></p>
+<h3 id="1-2-Webpack五个核心概念"><a href="#1-2-Webpack五个核心概念" class="headerlink" title="1.2 Webpack五个核心概念"></a>1.2 Webpack五个核心概念</h3><h4 id="1-2-1-Entry"><a href="#1-2-1-Entry" class="headerlink" title="1.2.1 Entry"></a>1.2.1 Entry</h4><p>入口(Entry)指示Webpack以哪个文件为入口起点开始打包，分析构建内部依赖图。</p>
+<h4 id="1-2-2-Output"><a href="#1-2-2-Output" class="headerlink" title="1.2.2 Output"></a>1.2.2 Output</h4><p>输出(Output)指示Webpack打包后的资源bundles输出到哪里去，以及如何命名。</p>
+<h4 id="1-2-3-Loader"><a href="#1-2-3-Loader" class="headerlink" title="1.2.3 Loader"></a>1.2.3 Loader</h4><p>Loader让Webpack能够去处理那些非JavaScript文件(webpack自身只能理解JavaScript)</p>
+<h4 id="1-2-4-Plugins"><a href="#1-2-4-Plugins" class="headerlink" title="1.2.4 Plugins"></a>1.2.4 Plugins</h4><p>插件(Plugins)可以用于执行范围更广的任务。插件的范围包括，从打包优化到压缩，一直到重新定义环境中的变量等。</p>
+<h4 id="1-2-5-Mode"><a href="#1-2-5-Mode" class="headerlink" title="1.2.5 Mode"></a>1.2.5 Mode</h4><p>模式(Mode)指示Webpack使用相应模式的配置。</br></p>
+<table border="1">
+    <tr>
+        <th>选项</th>
+        <th>描述</th>
+        <th>特点</th>
+    </tr>
+    <tr>
+        <td>development</td>
+        <td>会将process.env.NODE_ENV的值设为development。</br>启用NamedChunksPluin和NamedModulesPlugin。</td>
+        <td>能让代码本地调式运行的环境。</td>
+    </tr>
+    <tr>
+        <td>production</td>
+        <td>会将process.env.NODE_ENV的值设为production。</br>启用FlagDependencyUsagePluin、FlagIncludedChunksPluin、ModuleConcatenationPlugin、NoEmitOnErrorsPlugin、OccurrenceOrderPlugin、SidEffectsFlagPlugin、UglifyJsPlugin.</td>
+        <td>能让代码优化上线运行的环境。</td>
+    </tr>
+</table>
+
+<h3 id="1-3-Webpack初体验"><a href="#1-3-Webpack初体验" class="headerlink" title="1.3 Webpack初体验"></a>1.3 Webpack初体验</h3> 
       <!-- reward -->
       
       <div id="reword-out">
