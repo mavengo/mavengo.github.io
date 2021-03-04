@@ -85,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">433</span>
+            <span class="post-count">728</span>
         </span>
     </span>
 
@@ -94,7 +94,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">1 min</span>
+            <span class="post-count">3 min</span>
         </span>
     </span>
 </div>
@@ -141,7 +141,30 @@
     </tr>
 </table>
 
-<h3 id="1-3-Webpack初体验"><a href="#1-3-Webpack初体验" class="headerlink" title="1.3 Webpack初体验"></a>1.3 Webpack初体验</h3> 
+<h3 id="1-3-Webpack初体验"><a href="#1-3-Webpack初体验" class="headerlink" title="1.3 Webpack初体验"></a>1.3 Webpack初体验</h3><p><b style="color:deeppink"> 1、运行指令</b><br>   开发环境：webpack ./src/index.js -o ./build/built.js –mode=development <br><br>   解释：webpack会以 .src/index.js为入口文件开始打包，打包后输出到./build/built.js，整体打包环境是开发环境。<br></p>
+<p>   生产环境：webpack ./src/index.js -o ./build/built.js –mode=production<br><br>   解释：webpack会以 .src/index.js为入口文件开始打包，打包后输出到./build/built.js，整体打包环境是生产环境。<br></p>
+<p><b style="color:deeppink"> 2、结论：</b><br>    webpack能处理js/json, 不能处理css\img等其他资源。<br><br>    生产环境和开发环境将ES6模块化编译成浏览器能识别的模块化。<br><br>    成产环境比开发环境比开发环境多一个压缩js代码。<br></p>
+<p><b style="color:deeppink">index.js</b></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> data <span class="keyword">from</span> <span class="string">&#x27;./data.json&#x27;</span>;</span><br><span class="line"><span class="comment">//  import &#x27;./index.css&#x27; //打包会报错</span></span><br><span class="line"> <span class="built_in">console</span>.log(data);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(add(<span class="number">1</span>, <span class="number">1</span>));</span><br></pre></td></tr></table></figure>
+
+<p><b style="color:deeppink">打包:</b></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">D:\workspace\Webpack\<span class="number">02</span>webpack初体验&gt;webpack ./src/index.js -o ./build/built.js --mode=development</span><br><span class="line">asset main.js <span class="number">4.04</span> KiB [emitted] (name: main)</span><br><span class="line">runtime modules <span class="number">274</span> bytes <span class="number">1</span> <span class="built_in">module</span></span><br><span class="line">./src/index.js <span class="number">954</span> bytes [built] [code generated]</span><br><span class="line">./src/data.json <span class="number">25</span> bytes [built] [code generated]</span><br><span class="line">webpack <span class="number">5.23</span><span class="number">.0</span> compiled successfully <span class="keyword">in</span> <span class="number">144</span> ms</span><br><span class="line"></span><br><span class="line">D:\workspace\Webpack\<span class="number">02</span>webpack初体验&gt;</span><br></pre></td></tr></table></figure>
+
+<p><b style="color:deeppink">data.json</b></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;json&quot;</span>,</span><br><span class="line">    <span class="string">&quot;age&quot;</span>: <span class="string">&quot;66&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+<p><b style="color:deeppink"></b></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
       <div id="reword-out">

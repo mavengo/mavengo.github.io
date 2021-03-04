@@ -85,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">2.6k</span>
+            <span class="post-count">5.3k</span>
         </span>
     </span>
 
@@ -94,7 +94,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">10 min</span>
+            <span class="post-count">22 min</span>
         </span>
     </span>
 </div>
@@ -112,6 +112,7 @@
   <p><img src="http://pic1.win4000.com/wallpaper/2018-03-27/5ab9baf9002eb.jpg"></p>
 <h1 id="对于本篇博客的说明："><a href="#对于本篇博客的说明：" class="headerlink" title="对于本篇博客的说明："></a>对于本篇博客的说明：</h1><p>1、该篇博客是一个网课的课堂笔记，视频地址：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV14J4114768?p=1">黑马程序员pink老师前端入门教程</a></p>
 <p>2、学习的路线：<br>HTML5(20%)–&gt;CSS3(50%)–&gt;H5C3提高(10%)–&gt;项目-品优购电商网站(20%)</p>
+<p>3、参考文档<br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/">MDN</a><br><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/">w3school</a></p>
 <a id="more"></a>
 
 <h1 id="一、HTML5"><a href="#一、HTML5" class="headerlink" title="一、HTML5"></a>一、HTML5</h1><h2 id="1、HTML5简介"><a href="#1、HTML5简介" class="headerlink" title="1、HTML5简介"></a>1、HTML5简介</h2><h3 id="1、网页"><a href="#1、网页" class="headerlink" title="1、网页"></a>1、网页</h3><h4 id="1-1什么是网页"><a href="#1-1什么是网页" class="headerlink" title="1.1什么是网页"></a>1.1什么是网页</h4><p><b style="color:red">网站</b>是指在因特网上根据一定的规则，使用HTML等制作的用于展示特定内容相关的网页集合。</br><br><b style="color:red">网页</b>是网站中的一页，通常是<b style="color:red">HTML格式的文件</b>，它要通过浏览器来阅读。</br><br><b style="color:red">网页是构成网站的基本元素</b>，它通常由图片、链接、文字、声音、视频等元素组成。通常我们看到的网页，常见以<b style="color:red">.html或.htm</b>后缀结尾的文件，因此将其俗称为HTML文件。</br></p>
@@ -480,7 +481,345 @@ alt是替换文本，title是提示文本。
   </tbody>
 </table>
 
-<h3 id="2、列表"><a href="#2、列表" class="headerlink" title="2、列表"></a>2、列表</h3> 
+<h3 id="2、列表"><a href="#2、列表" class="headerlink" title="2、列表"></a>2、列表</h3><h4 id="2-1-无序列表-（重点）"><a href="#2-1-无序列表-（重点）" class="headerlink" title="2.1 无序列表 （重点）"></a>2.1 无序列表 （重点）</h4><p><b style="color:yellow">1、语法格式：</b> </br></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>列表项<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>列表项<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>列表项<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>列表项<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><b style="color:yellow">2、注意事项：</b> </br></p>
+<ul>
+    <li>无序列表各个列表项之间没有顺序级别之分，是并列的。</li>
+    <li>ul中只能嵌套li标签，直接在ul标签中输入其他标签或文字的做法都是不被允许的。</li>
+    <li>li标签相当于一个容器，可以容纳所有元素。</li>
+    <li>无序列表会带有自己的样式，在实际使用时，我们会使用CSS来设置。</li>
+</ul>
+
+<h4 id="2-2-有序列表-（理解）"><a href="#2-2-有序列表-（理解）" class="headerlink" title="2.2 有序列表 （理解）"></a>2.2 有序列表 （理解）</h4><p>有序列表即为排列有序的列表，其各个列表项会按照一定的顺序排列定义。</p>
+<p><b style="color:yellow">1、语法格式：</b> </br></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>列表项<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>列表项<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>列表项<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>列表项<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-3-自定义列表-（重点）"><a href="#2-3-自定义列表-（重点）" class="headerlink" title="2.3 自定义列表 （重点）"></a>2.3 自定义列表 （重点）</h4><p><b style="color:yellow">1、语法格式：</b></br></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dl</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dt</span>&gt;</span>头部1<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>列表项<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>列表项<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>列表项<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dt</span>&gt;</span>头部2<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>列表项<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>列表项<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>列表项<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>列表项<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">b</span> <span class="attr">style</span>=<span class="string">&quot;color:yellow&quot;</span>&gt;</span>2、注意事项：<span class="tag">&lt;/<span class="name">b</span>&gt;</span> <span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dl</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dt</span>&gt;</span>注意事项：<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>dl里面只能包含dt、dd标签。<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>dt和dd个数没有限制。<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>列表项<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br><span class="line"></span><br><span class="line">### 3、表单标签</span><br><span class="line"></span><br><span class="line">#### 3、1  为什么需要表单</span><br><span class="line"></span><br><span class="line">使用表单的目的为了收集用户信息。<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">在网页中，我们也需要跟用户进行交互，收集用户资料，此时就需要表单来收集用户信息。</span><br><span class="line"></span><br><span class="line">#### 3、2 表单的组成</span><br><span class="line"></span><br><span class="line">一个完整的表单通常由表单域（form标签）、表单控件（表单元素）、提示信息三部分组成。</span><br><span class="line"></span><br><span class="line">#### 3、3 表单域</span><br><span class="line"></span><br><span class="line">表单域是一个包含表单元素的区域。</span><br><span class="line">在HTML标签中，form标签用于定义表单域，以实现用户信息的收集和传递。</span><br><span class="line">form会把范围内的表单元素信息提交给服务器。</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">b</span> <span class="attr">style</span>=<span class="string">&quot;color:yellow&quot;</span>&gt;</span>1、语法格式：<span class="tag">&lt;/<span class="name">b</span>&gt;</span> <span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br><span class="line"></span><br><span class="line">```html</span><br><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;url地址&quot;</span> <span class="attr">method</span>=<span class="string">&quot;提交方式&quot;</span> <span class="attr">name</span>=<span class="string">&quot;表单域名称&quot;</span>&gt;</span></span><br><span class="line">    各种表单元素控件</span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><b style="color:yellow">2、常用属性：</b> </br></p>
+<table border= 1>
+    <tr>
+        <th>属性</th>
+        <th>属性值</th>
+        <th>作用</th>
+    </tr>
+    <tr>
+        <td>action</td>
+        <td>url地址</td>
+        <td>用于指定接收处理表单数据的服务器程序的url地址。</td>
+    <tr>
+    <tr>
+        <td>method</td>
+        <td>get/post</td>
+        <td>用于设置表单数据的提交数据。</td>
+    <tr>
+    <tr>
+        <td>name</td>
+        <td>名称</td>
+        <td>用于指定表单的名称，以区分同一个页面中的多个表单域。</td>
+    <tr>
+</table>
+
+<h4 id="3、4-表单控件（表单元素）"><a href="#3、4-表单控件（表单元素）" class="headerlink" title="3、4 表单控件（表单元素）"></a>3、4 表单控件（表单元素）</h4><ol>
+    <li>input输入表单元素。</li>
+    <li>select下拉表单元素。</li>
+    <li>textarea文本域元素。</li>
+    <li></li>
+</ol>
+
+<p><b style="color:yellow">3.4.1 input表单元素</b> </br></p>
+<p>input标签用于收集用户信息，标签包含type属性，根据不同的type属性值，输入字段拥有很多形式（文本、复选框、掩码后的文本控件、单选按钮、按钮等。）</p>
+<p><b>1、语法格式：</b> </br></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;属性值&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><b>2、type属性的属性值即描述：</b> </br></p>
+<table border=1>
+    <tr>
+        <th>属性值</th>
+        <th>描述</th>
+    </tr>
+    <tr>
+        <td>button</td>
+        <td>可点击按钮</td>
+    <tr>
+    <tr>
+        <td>checkbox</td>
+        <td>复选框</td>
+    <tr>
+    <tr>
+        <td>file</td>
+        <td>定义输入字段和“浏览”按钮，供文件上传</td>
+    <tr>
+    <tr>
+        <td>heidden</td>
+        <td>隐藏输入字段</td>
+    <tr>
+    <tr>
+        <td>image</td>
+        <td>图片形式的提交按钮</td>
+    <tr>
+    <tr>
+        <td>password</td>
+        <td>密码字段</td>
+    <tr>
+    <tr>
+        <td>radio</td>
+        <td>单选按钮</td>
+    <tr>
+    <tr>
+        <td>reset</td>
+        <td>重置按钮</td>
+    <tr>
+    <tr>
+        <td>submit</td>
+        <td>提交按钮</td>
+    <tr>
+    <tr>
+        <td>text</td>
+        <td>输入字段（默认宽度为20个字符）</td>
+    <tr>
+</table>
+
+<p><b>3、input标签的其他属性：</b> </br></p>
+<table border=1>
+    <tr>
+        <th>属性</th>
+        <th>属性值</th>
+        <th>描述</th>
+    </tr>
+    <tr>
+        <td>name</td>
+        <td>用户自定义</td>
+        <td>定义input元素的名称</td>
+    <tr>
+    <tr>
+        <td>value</td>
+        <td>用户自定义</td>
+        <td>规定input元素的值</td>
+    <tr>
+    <tr>
+        <td>checked</td>
+        <td>checked</td>
+        <td>规定input元素首次加载时默认选中</td>
+    <tr>
+    <tr>
+        <td>maxlength</td>
+        <td>正整数</td>
+        <td>规定输入字段中字符的最大长度</td>
+    <tr>
+</table>
+
+<p><b>4、注意事项：</b> </br></p>
+<ol>
+    <li>name、valur是每个表单元素都有的属性，主要给后台人员使用。</li>
+    <li>name表单元素的名字，要求单选按钮和复选框按钮有相同的name属性，才生效。</li>
+</ol>
+
+<p><b>5、综上实例：</b> </br></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;doLogin.php&quot;</span> <span class="attr">method</span>=<span class="string">&quot;get&quot;</span>&gt;</span></span><br><span class="line">        用户名：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span> <span class="attr">value</span>=<span class="string">&quot;请输入用户名&quot;</span> <span class="attr">maxlength</span>=<span class="string">&quot;6&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">        密码：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;password&quot;</span> <span class="attr">name</span>=<span class="string">&quot;pwd&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">        性别：男<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;sex&quot;</span>&gt;</span> 女<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;sex&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">        爱好：<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">        看书<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">checked</span> <span class="attr">name</span>=<span class="string">&quot;hobby&quot;</span>&gt;</span></span><br><span class="line">        打游戏<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">name</span>=<span class="string">&quot;hobby&quot;</span>&gt;</span></span><br><span class="line">        看电影<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">name</span>=<span class="string">&quot;hobby&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">        上传头像：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;file&quot;</span> <span class="attr">name</span>=<span class="string">&quot;nav&quot;</span> <span class="attr">value</span>=<span class="string">&quot;选择本地图片&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;提交&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;reset&quot;</span> <span class="attr">value</span>=<span class="string">&quot;重置&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><b style="color:yellow">3.4.2 label标签</b> </br></p>
+<p>label标签为input元素定义标注（标签）。<br><br>label标签用于绑定一个表单元素，当点击label标签内的文本时，浏览器就会自动将焦点（光标）转到或者选择对应的表单元素上，增加用户体验。</p>
+<p><b>1、语法格式：</b> </br></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;sex&quot;</span>&gt;</span>男<span class="tag">&lt;/<span class="name">label</span>&gt;</span> <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;sex&quot;</span> <span class="attr">id</span>=<span class="string">&quot;sex&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><b>2、核心：</b> </br><br>label标签的for属性应当与相关元素的id属性相同。</p>
+<p><b style="color:yellow">3.4.3 select表单元素</b> </br></p>
+<p>select标签定义下拉列表。</p>
+<p><b>1、语法格式：</b> </br></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span>&gt;</span>选项<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">selected</span> &gt;</span>222<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span>&gt;</span>选项<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span>&gt;</span>选项<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><b>2、注意事项：</b> </br></p>
+<ol>
+    <li>select中至少包含一对option标签。</li>
+    <li>option中定义selected="selected"或selected时，当前选项即为默认选项。</li>
+</ol>
+
+<p><b style="color:yellow">3.4.4 textarea表单元素</b> </br></p>
+<p><b>1、语法格式：</b> </br></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">cols</span>=<span class="string">&quot;30&quot;</span> <span class="attr">rows</span>=<span class="string">&quot;10&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><b>2、注意事项：</b> </br></p>
+<ol>
+    <li>textarea标签用来定义多行输入框。</li>
+    <li>cols = "每行中的字符数"，rows = "显示的行数"，在实际开发中不会使用，都是用css来改变大小。</li>
+</ol>
+
+<h1 id="二、CSS"><a href="#二、CSS" class="headerlink" title="二、CSS"></a>二、CSS</h1><ol>
+    <li>CSS简介</li>
+    <li>CSS基础选择器</li>
+    <li>CSS字体属性</li>
+    <li>CSS文本属性</li>
+    <li>CSS的引入方式</li>
+    <li>综合案例</li>
+    <li>Chrome调试工具</li>
+</ol>
+
+<h2 id="1、CSS简介"><a href="#1、CSS简介" class="headerlink" title="1、CSS简介"></a>1、CSS简介</h2><h3 id="1-1-CSS-网页美容师"><a href="#1-1-CSS-网页美容师" class="headerlink" title="1.1 CSS-网页美容师"></a>1.1 CSS-网页美容师</h3><p>css是层叠样式表(Cascading Style Sheets)的简称。<br><br>有时我们也会称之为CSS样式表或级联样式表。<br><br>CSS是一种标记语言。<br><br>CSS主要用于设置网页元素的样式。</p>
+<h3 id="1-2-CSS语法规范"><a href="#1-2-CSS语法规范" class="headerlink" title="1.2 CSS语法规范"></a>1.2 CSS语法规范</h3><p>CSS主要由两部分组成： 选择器以及一条或多条声明组成。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span> &#123; <span class="attribute">weidth</span>: <span class="number">100px</span>, height: <span class="number">100px</span> &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-3-CSS代码风格"><a href="#1-3-CSS代码风格" class="headerlink" title="1.3 CSS代码风格"></a>1.3 CSS代码风格</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span> &#123; </span><br><span class="line">    <span class="attribute">weidth</span>: <span class="number">100px</span>,</span><br><span class="line">    height: <span class="number">100px</span> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2、CSS基础选择器"><a href="#2、CSS基础选择器" class="headerlink" title="2、CSS基础选择器"></a>2、CSS基础选择器</h2><h3 id="2-1-CSS选择器的作用"><a href="#2-1-CSS选择器的作用" class="headerlink" title="2.1 CSS选择器的作用"></a>2.1 CSS选择器的作用</h3><p>选择器就是根据不同需求把不同的标签选出来，这就是选择器的作用。<br><br><br>CSS做了两件事： <br></p>
+<ol>
+    <li>找到相应选择器。</li>
+    <li>设置这些标签的样式。</li>
+</ol>
+
+<h3 id="2-2-选择器的分类"><a href="#2-2-选择器的分类" class="headerlink" title="2.2 选择器的分类"></a>2.2 选择器的分类</h3><p>选择器分为基础选择器、复合选择器两个大类。<br></p>
+<p><b style="color:yellow">(1)基础选择器</b> </br></p>
+<ul>
+    <li>基础选择器是由两个单个选择器组成的。</li>
+    <li>基础选择器：标签选择器、类选择器、id选择器、通配符选择器。</li>
+</ul>
+
+<h3 id="2-3-标签选择器"><a href="#2-3-标签选择器" class="headerlink" title="2.3 标签选择器"></a>2.3 标签选择器</h3><p>标签选择器(元素选择器)是指用HTML标签名称作为选择器，按标签的名称分类，为页面中某一类标签指定统一的CSS样式。</p>
+<p><b style="color:yellow">(1) 语法：</b> </br></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">标签名 &#123;</span><br><span class="line">    属性： 属性值;</span><br><span class="line">    <span class="selector-tag">color</span>: <span class="selector-tag">red</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><b style="color:yellow">(2)作用：</b> </br></p>
+<p>标签选择器可以把某一类标签全部选择出来。</p>
+<p><b style="color:yellow">(3)优点：</b> </br></p>
+<p>能快速为页面中同类型的标签统一设置样式。</p>
+<p><b style="color:yellow">(4)缺点：</b> </br></p>
+<p>不能设计差异化样式，只能选择全部的当前标签。</p>
+<h3 id="2-4-类选择器"><a href="#2-4-类选择器" class="headerlink" title="2.4 类选择器"></a>2.4 类选择器</h3><p><b style="color:yellow">(1)语法</b> </br></p>
+<p>css样式：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.className</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>html中使用：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;className&quot;</span>&gt;</span>使用类标签渲染<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><b style="color:yellow">(2)类命名规范</b> </br></p>
+<ol>
+    <li>头：header</li>
+    <li>内容：content/container</li>
+    <li>尾：footer</li>
+    <li>导航：nav</li>
+    <li>侧栏：sidebar</li>
+    <li>栏目：column</li>
+    <li>页面外围控制整体布局宽度：wrapper</li>
+    <li>左右中：left right center</li>
+    <li>登陆条：loginbar</li>
+    <li>标志；logo</li>
+    <li>广告：banner</li>
+    <li>页面主体：main</li>
+    <li>热点：hot</li>
+    <li>新闻：news</li>
+    <li>下载：download</li>
+    <li>子导航：subnav</li>
+    <li>菜单：menu</li>
+    <li>子菜单：submenu</li>
+</ol>
+
+<p><b style="color:yellow">(3)多类名</b> </br></p>
+<p>一个标签中可以指定多个类名选择器。</p>
+<ul>
+    <li>在标签class属性中可以写多个类名。</li>
+    <li>多个类名之间必须使用空格分开。</li>
+</ul>
+
+<p>使用的场景：</p>
+<p>把一些标签公共的样式放到一个类中，这些标签都可以调用公共类然后在调用自己独有的类。从而节省CSS代码。</p>
+<h3 id="2-5-id选择器"><a href="#2-5-id选择器" class="headerlink" title="2.5 id选择器"></a>2.5 id选择器</h3><p><b style="color:yellow">(1)语法：</b> </br></p>
+<p>css代码：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#idName</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: pink;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>html标签中使用：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;idName&quot;</span>&gt;</span>id选择器渲染样式<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><b style="color:yellow">(2)id选择器和类选择器的区别：</b> </br></p>
+<ol>
+    <li>类选择器可以同时使用多个，而id选择器是唯一的。</li>
+    <li>id选择器是唯一的，不得重复。</li>
+    <li>类选择器在修改样式作中用的多，id选择器一般用于页面唯一性的元素上，经常和JavaScript搭配使用。</li>
+    <li></li>
+</ol>
+
+<h3 id="2-6-通配符选择器"><a href="#2-6-通配符选择器" class="headerlink" title="2.6 通配符选择器"></a>2.6 通配符选择器</h3><p>在CSS中，通配符选择器使用“*”定义，它表示页面中所有的元素(标签)。<br></p>
+<ul>
+    <li>通配符选择器不需要调用，自动就给所有的标签设置样式。</li>
+    <li>一般用于清除网页默认的内边距和外边距。</li>
+</ul>
+
+<p><b style="color:yellow">(1)语法：</b> </br></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3、CSS字体属性"><a href="#3、CSS字体属性" class="headerlink" title="3、CSS字体属性"></a>3、CSS字体属性</h2><h3 id="3-1字体系列"><a href="#3-1字体系列" class="headerlink" title="3.1字体系列"></a>3.1字体系列</h3><p>CSS使用font-family属性定义文本的字体系列。</p>
+<p><b style="color:yellow">(1)语法：</b> </br></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">&#x27;Microsoft Yahei&#x27;</span>, <span class="string">&#x27;微软雅黑&#x27;</span>, <span class="string">&#x27;黑体&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol>
+    <li>各种字体之间必须使用英文状态下的逗号隔开。</li>
+    <li>由多个单词组成的字体加引号。</li>
+    <li>常见字体：Microsoft Yahei, tohoma, arial, Hiragino Sans GN</li>
+    <li>标签可以设置多个字体。</li>
+</ol>
+
+<h3 id="3-2字体大小"><a href="#3-2字体大小" class="headerlink" title="3.2字体大小"></a>3.2字体大小</h3><h3 id="3-3字体系列"><a href="#3-3字体系列" class="headerlink" title="3.3字体系列"></a>3.3字体系列</h3><h3 id="3-4字体系列"><a href="#3-4字体系列" class="headerlink" title="3.4字体系列"></a>3.4字体系列</h3><h3 id="3-5字体系列"><a href="#3-5字体系列" class="headerlink" title="3.5字体系列"></a>3.5字体系列</h3><h3 id="3-1字体系列-1"><a href="#3-1字体系列-1" class="headerlink" title="3.1字体系列"></a>3.1字体系列</h3><p><b style="color:yellow"></b> </br></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p style="color:yellow"></p>
+
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+
+<ol>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ol>
+
+<dl>
+    <dt>头部1</dt>
+    <dd>列表项</dd>
+    <dd>列表项</dd>
+    <dd>列表项</dd>
+    <dt>头部2</dt>
+    <dd>列表项</dd>
+    <dd>列表项</dd>
+    <dd>列表项</dd>
+    <dd>列表项</dd>
+</dl>
+
+
+<table border=1>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    <tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    <tr>
+    <tr>
+        <td></td>
+        <td></td>
+    <tr>
+</table>
+
+<select>
+    <option>选项</option>
+    <option selected >222</option>
+    <option>选项</option>
+    <option>选项</option>
+</select> 
       <!-- reward -->
       
       <div id="reword-out">
