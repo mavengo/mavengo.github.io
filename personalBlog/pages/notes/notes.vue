@@ -15,7 +15,7 @@
 		methods:{
 			goback(){
 				uni.navigateTo({
-					url:'/pages/index/index'
+					url:'/pages/login/login'
 				})
 			},
 		}
