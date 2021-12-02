@@ -19,7 +19,7 @@
             "path" : "pages/notes/notes",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "MyFirstBlog",
                 "enablePullDownRefresh": false
             }
             
