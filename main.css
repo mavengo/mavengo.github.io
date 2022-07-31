@@ -1,0 +1,79 @@
+/*!****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/style/common.less ***!
+  \****************************************************************************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font: bold 20px "Courier";
+}
+#main {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px auto;
+  width: 360px;
+  height: 420px;
+  border: 10px solid black;
+  border-radius: 10px;
+  background-color: #94a591 !important;
+}
+#stage {
+  position: relative;
+  width: 304px;
+  height: 304px;
+  border: 2px solid black;
+}
+#stage #snake > div {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  background-color: #000;
+}
+#stage > #food {
+  position: absolute;
+  top: 50px;
+  left: 70px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  background-color: #488e07;
+}
+#snackHead {
+  background-color: #16cd0c !important;
+  border-radius: 50%;
+  border: 1px solid #deec43 !important;
+}
+#score-panel {
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+}
+.phoneBtn {
+  margin: 0 auto;
+  width: 200px;
+  height: 40px;
+}
+.phoneBtn .top,
+.phoneBtn .updown,
+.phoneBtn .leftOrRight > div {
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: aquamarine;
+  color: #000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.bodyBox {
+  background: url(cb02a37e5629403454eb4d4b1ea518c4.png) !important;
+}
+

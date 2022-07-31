@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>template</title>
+    <style>
+        .reload {
+            position: relative;
+            left: -70px;
+            padding: 3px 10px;
+            border-radius: 4px;
+            background-color: rgb(77, 210, 106);
+            border: 0;
+            color: aliceblue;
+        }
+    </style>
+<script defer src="bundle.js"></script><link href="main.css" rel="stylesheet"></head>
+<body class="bodyBox">
+    <!-- 游戏主页面 -->
+    <div id="main">
+        <div id="stage">
+            <div id="snake">
+                <div id="snackHead"></div>
+            </div>
+            <div id="food"></div>
+        </div>
+        <div id="score-panel">
+            <div>
+                SCORE: <span id="score">0</span>
+            </div>
+            <div>
+                LEVEL: <span id="level">1</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 移动端按键 -->
+    <div class="phoneBtn">
+        <!-- 从新开始 -->
+        <button class="reload" onclick="shuaxin()">从新开始</button>
+        <div id="phTop" class="top">上</div>
+        <div class="leftOrRight" style="display: flex; justify-content: space-between;">
+            <div id="phLeft">左</div>
+            <div id="phRight">右</div>
+        </div>
+        <div id="phUpdown" class="updown">下</div>
+    </div>
+
+    <script>
+        function shuaxin() {
+            location.reload();
+        }
+    </script>
+
+</body>
+</html>
